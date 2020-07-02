@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Test</title>
+</head>
+<body>
+	
+	<table>
+    <thead>
+    <th>codigo</th>
+    <th>nombre</th>
+    <th>apellido</th>
+    <th>notamateria</th>
+    </thead>
+
+    <th:block th:each="alumnoM, row: ${alumnoMaterias}">
+        <tr>
+            <th th:text="${alumnoM.alumno.codigoEstudiante}">
+            <th th:text="${alumnoM.alumno.nombreEstudiante}">
+            <th th:text="${alumnoM.materia.nombreMateria}">
+            <th th:text="${alumnoM.notaMateria}">
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>
